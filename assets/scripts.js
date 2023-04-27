@@ -17,7 +17,7 @@ setInterval(() => {
 // grabs city and info about city
 
 function current(city){
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&units=imperial&appid=${apiKey}`)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&units=imperial&appid=${apiKey}`)
 .then(res => res.json())
 .then(data =>{
     console.log(data)
@@ -45,10 +45,10 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&units=im
 }
 
 function geocache(city){
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`)
     .then(res => res.json())
     .then(data =>{
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&units=imperial&appid=${apiKey}`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&units=imperial&appid=${apiKey}`)
         .then(res => res.json())
         .then(wdata =>{ 
             // console.log(wdata)
