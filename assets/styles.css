@@ -1,18 +1,11 @@
-
 :root {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
 }
-
-
-
 html {
     background: linear-gradient(azure,azure,blue);
     height: 100%;
-
 }
-
-
 h1 {
     color: azure;
     font-family: sans;
@@ -25,9 +18,7 @@ h1 {
     position: relative;
     margin: 0 -8px;
     margin-top: -8px;
-    
 }
-
 aside {
     display: flex;
     flex-flow: column;
@@ -46,64 +37,38 @@ main {
     padding-bottom: 1rem;
 }
 #start {
-    background-color: lightblue;
+    background-color: rgb(89, 41, 236);
    border-bottom-left-radius: 2rem;
    border-bottom-right-radius: 2rem;
    border: gray 1px solid;
+   font: bold;
+   color: azure;
 }
 #separate {
     display: flex;
 }
-
 #top {
     border: inset darkgrey 2px;
     margin: 10px;
-    background-color: lightblue;
+    background-color: rgb(150, 240, 235);
     border-radius: 1rem;
     padding: 1rem;
-
-
-
 }
 #bottom {
    margin: 10px;
    display: flex;
    justify-content: space-between;
-
 }
 .bottom5 {
     border: solid black 1px;
     margin: 10px;
-    background-color: lightblue;
-    border-radius: 2rem;
+    background-color: rgb(166, 150, 240);
+    border-radius: 1rem;
     padding: 1rem;
 }
-
 .city-btns{
     display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* &#176; */

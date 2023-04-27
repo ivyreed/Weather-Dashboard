@@ -7,11 +7,12 @@ var btnbtn = document.getElementsByClassName('city-btns')
 const apiKey   = '1fb309de6e34405a44ff7a7f2f85306b';
 // Sets the current date 
 setInterval(() => {
-    var time = new Date();
-    var month = time.getMonth();
-    var day = time.getDay();
-    var year = time.getFullYear();
-    curDate.innerHTML = "(" + month + '/' + day + '/' + year + ')';
+    var curentDate = new Date();
+    var dd = String(curentDate.getDate()).padStart(2, '0');
+    var mm = String(curentDate.getMonth() + 1).padStart(2, '0');
+    var yyyy = curentDate.getFullYear();
+    curentDate ='(' + mm + '/' + dd + '/' + yyyy + ')';
+    curDate.innerHTML = curentDate;
 }, 1000);
 // grabs city and info about city
 
@@ -23,10 +24,10 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&units=im
   console.log(data.main.humidity)
         let hum =('Humidity: ' + (data.main.humidity) + '%');
         let icon=(data.weather[0].icon)
-        let date=(data.dt_txt)
-        // console.log(date)
-        // let formattedDate = new Date(date).toLocaleDateString('en-us')
-        // console.log(formattedDate)
+        let nDate=(data.dt)
+        var s = new Date(nDate).toLocaleDateString("en-US")
+        console.log(s)
+        
 
 
         console.log(icon)
@@ -57,13 +58,13 @@ function geocache(city){
                 let hum =('Humidity: ' + (wdata.list[i].main.humidity) + '%');
                 let icon=(wdata.list[i].weather[0].icon)
                 let date=(wdata.list[i].dt_txt)
-                console.log(date)
+                // console.log(date)
                 let fDay = new Date(date).toLocaleDateString('en-us')
-                console.log(fDay)
+                // console.log(fDay)
                 let dPlace = document.getElementById('d' + [i])
                 dPlace.innerHTML =('(' + fDay + ')')
 
-                console.log(icon)
+                // console.log(icon)
                 let iPlace= document.getElementById('i' + [i])
                 iPlace.setAttribute('src', `https://openweathermap.org/img/wn/${icon}@2x.png`)
                 let wind=('Wind: ' + (Math.round(wdata.list[i].wind.speed)) + ' MPH');
