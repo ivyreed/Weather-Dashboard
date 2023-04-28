@@ -20,8 +20,6 @@ function current(city){
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&units=imperial&appid=${apiKey}`)
 .then(res => res.json())
 .then(data =>{
-    console.log(data)
-  console.log(data.main.humidity)
         let hum =('Humidity: ' + (data.main.humidity) + '%');
         let icon=(data.weather[0].icon)
         let iPlace= document.getElementById('i' + [0])
