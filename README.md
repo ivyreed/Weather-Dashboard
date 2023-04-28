@@ -26,7 +26,7 @@ These links will take you to the application itself
 https://ivyreed.github.io/Weather-Dashboard/
 
 This is a screenshot of the running application
-![the display should show as follows.](./Assets/screenshot.png)
+![the display should show as follows.](./assets/screenshot.png)
 
 ## Features
 
